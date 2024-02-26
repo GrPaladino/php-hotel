@@ -1,4 +1,4 @@
-<?php require_once './index.php' ?>;
+<?php require_once './main.php' ?>;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,15 @@
     <title>Hotel list</title>
 </head>
 <body>
-    
+    <div class="container mt-5">
+        <?php foreach ($hotels as $hotel): ?> 
+            <?= $hotel['name'] ?> <br>
+            <?= $hotel['description'] ?><br>
+            <?= $hotel['parking'] ?><br>
+            <?= $hotel['vote'] ?><br>
+            <?= $hotel['distance_to_center'] ?><br>
+            <hr>
+            <?php endforeach ?>
+    </div>
 </body>
 </html>
