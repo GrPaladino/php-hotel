@@ -2,14 +2,17 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Boostrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Hotel list</title>
 </head>
+
 <body>
     <div class="container mt-5">
 
@@ -17,7 +20,7 @@
         <form method="GET" class="form-control">
             <div class="row">
 
-                
+
                 <div class="col-3">
                     <label for="parking" class="form-label">Parking</label>
                     <select class="form-select" id="parking" name="parking" required>
@@ -55,18 +58,29 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($filtered_hotel as $hotel): ?> 
+                <?php foreach ($filtered_hotel as $hotel): ?>
 
-                <tr>
-                  <td><?= $hotel['name'] ?></td>
-                  <td><?= $hotel['description'] ?></td>
-                  <td><?= $hotel['parking'] ?></td>
-                  <td><?= $hotel['vote'] ?></td>
-                  <td><?= $hotel['distance_to_center'] ?></td>
-                </tr>
+                    <tr>
+                        <td>
+                            <?= $hotel['name'] ?>
+                        </td>
+                        <td>
+                            <?= $hotel['description'] ?>
+                        </td>
+                        <td>
+                            <?= $hotel['parking'] ?>
+                        </td>
+                        <td>
+                            <?= $hotel['vote'] ?>
+                        </td>
+                        <td>
+                            <?= $hotel['distance_to_center'] ?>
+                        </td>
+                    </tr>
                 <?php endforeach ?>
             </tbody>
         </table>
     </div>
 </body>
+
 </html>
