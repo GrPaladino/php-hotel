@@ -12,14 +12,30 @@
 </head>
 <body>
     <div class="container mt-5">
-        <?php foreach ($hotels as $hotel): ?> 
-            <?= $hotel['name'] ?> <br>
-            <?= $hotel['description'] ?><br>
-            <?= $hotel['parking'] ?><br>
-            <?= $hotel['vote'] ?><br>
-            <?= $hotel['distance_to_center'] ?><br>
-            <hr>
-            <?php endforeach ?>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Hotel Name</th>
+                    <th scope="col">Hotel Description</th>
+                    <th scope="col">Parking Available</th>
+                    <th scope="col">Hotel Valuation</th>
+                    <th scope="col">Distance to City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($hotels as $hotel): ?> 
+
+                <tr>
+                  <td><?= $hotel['name'] ?></td>
+                  <td><?= $hotel['description'] ?></td>
+                  <td><?= $hotel['parking'] ?></td>
+                  <td><?= $hotel['vote'] ?></td>
+                  <td><?= $hotel['distance_to_center'] ?></td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
