@@ -15,19 +15,33 @@
 
 
         <form method="GET" class="form-control">
-            <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">Parking</label>
-                <select class="form-select" id="validationCustom04" name="parking" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>Available</option>
-                    <option>Not Available</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
+            <div class="row">
 
-            <button class="btn btn-primary mt-3">Search</button>
+                
+                <div class="col-3">
+                    <label for="parking" class="form-label">Parking</label>
+                    <select class="form-select" id="parking" name="parking" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                    </select>
+                    <button class="btn btn-primary mt-3">Search</button>
+
+                </div>
+
+                <div class="col-3">
+                    <label for="star" class="form-label">Hotel Stars</label>
+                    <select class="form-select" id="star" name="star" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+            </div>
         </form>
 
         <table class="table">
