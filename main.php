@@ -1,6 +1,6 @@
 <?php
 
-    $hotels = [
+$hotels = [
 
         [
             'name' => 'Hotel Belvedere',
@@ -38,6 +38,21 @@
             'distance_to_center' => 50
         ],
 
-    ];
+];
 
-?>;
+$form_sent = !empty($_GET);
+
+if($form_sent) {
+    $parking = ($_GET['parking'] == 'Available') ? true : false; 
+    $filtered_hotel = [];
+
+    foreach ($hotels as $hotel) {
+        if($hotel['parking'] == $parking) {
+            $filtered_hotel[] = $hotel;
+        }
+    }
+    
+};
+
+
+

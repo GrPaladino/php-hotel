@@ -1,4 +1,4 @@
-<?php require_once './main.php' ?>;
+<?php require_once './main.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,23 @@
 <body>
     <div class="container mt-5">
 
+
+        <form method="GET" class="form-control">
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Parking</label>
+                <select class="form-select" id="validationCustom04" name="parking" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Available</option>
+                    <option>Not Available</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-3">Search</button>
+        </form>
+
         <table class="table">
             <thead>
                 <tr>
@@ -24,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($hotels as $hotel): ?> 
+                <?php foreach ($filtered_hotel as $hotel): ?> 
 
                 <tr>
                   <td><?= $hotel['name'] ?></td>
