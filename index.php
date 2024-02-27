@@ -1,4 +1,4 @@
-<?php require_once './main.php' ?>
+<?php require_once __DIR__ . '/./partials/init.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +25,8 @@
                     <label for="parking" class="form-label">Parking</label>
                     <select class="form-select" id="parking" name="parking" required>
                         <option selected disabled value="">Choose...</option>
-                        <option>Available</option>
-                        <option>Not Available</option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </select>
                     <button class="btn btn-primary mt-3">Search</button>
 
@@ -58,7 +58,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($filtered_hotel as $hotel): ?>
+                <?php foreach ($hotels as $hotel): ?>
 
                     <tr>
                         <td>
@@ -68,7 +68,7 @@
                             <?= $hotel['description'] ?>
                         </td>
                         <td>
-                            <?= $hotel['parking'] ?>
+                            <?= $hotel['parking'] ? 'Yes' : 'No' ?>
                         </td>
                         <td>
                             <?= $hotel['vote'] ?>
